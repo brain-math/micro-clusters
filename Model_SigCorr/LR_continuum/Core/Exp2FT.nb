@@ -1,0 +1,178 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 12.3' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      5368,        168]
+NotebookOptionsPosition[      4670,        147]
+NotebookOutlinePosition[      5067,        163]
+CellTagsIndexPosition[      5024,        160]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell[BoxData[
+ RowBox[{"Assuming", "[", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"s", ">", "0"}], " ", "&&", " ", 
+     RowBox[{
+      SqrtBox[
+       RowBox[{
+        SuperscriptBox["nx", "2"], "+", 
+        SuperscriptBox["ny", "2"]}]], "\[GreaterEqual]", "0"}]}], "}"}], ",", 
+   RowBox[{"FourierTransform", "[", 
+    RowBox[{
+     RowBox[{"A", " ", 
+      RowBox[{"Exp", "[", 
+       RowBox[{
+        RowBox[{"-", 
+         RowBox[{"(", 
+          RowBox[{
+           RowBox[{"x", "^", "2"}], "+", 
+           RowBox[{"y", "^", "2"}]}], ")"}]}], "/", 
+        RowBox[{"(", 
+         RowBox[{"s", "^", "2"}], ")"}]}], "]"}]}], ",", 
+     RowBox[{"{", 
+      RowBox[{"x", ",", "y"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"nx", ",", "ny"}], "}"}], ",", 
+     RowBox[{"FourierParameters", "->", 
+      RowBox[{"{", 
+       RowBox[{"0", ",", 
+        RowBox[{
+         RowBox[{"-", "2"}], "*", "Pi"}]}], "}"}]}]}], "]"}]}], 
+  "]"}]], "Input",
+ CellChangeTimes->{{3.845142649818358*^9, 3.8451426641552086`*^9}, {
+   3.845142724260522*^9, 3.845142733257791*^9}, 3.8451427728785057`*^9, {
+   3.8451428470724936`*^9, 3.845142876280959*^9}, {3.845142935449188*^9, 
+   3.8451429677587852`*^9}},
+ CellLabel->"In[23]:=",ExpressionUUID->"92441cdc-f725-49d0-bd0b-26e31d18c876"],
+
+Cell[BoxData[
+ TemplateBox[{
+   RowBox[{"A", " ", 
+     SuperscriptBox["\[ExponentialE]", 
+      RowBox[{"-", 
+        RowBox[{"(", 
+          RowBox[{
+            RowBox[{"(", 
+              RowBox[{
+                SuperscriptBox["nx", "2"], "+", 
+                SuperscriptBox["ny", "2"]}], ")"}], " ", 
+            SuperscriptBox["\[Pi]", "2"], " ", 
+            SuperscriptBox["s", "2"]}], ")"}]}]], " ", "\[Pi]", " ", 
+     SuperscriptBox["s", "2"]}], 
+   RowBox[{
+     RowBox[{
+       SqrtBox[
+        RowBox[{
+          SuperscriptBox["nx", "2"], "+", 
+          SuperscriptBox["ny", "2"]}]], " ", "\[Pi]"}], "\[GreaterEqual]", 
+     "0"}]},
+  "ConditionalExpression"]], "Output",
+ CellChangeTimes->{
+  3.8451426664715815`*^9, 3.8451427359632196`*^9, 3.8451427738311186`*^9, 
+   3.845142851515455*^9, {3.8451429438065147`*^9, 3.8451429685108585`*^9}},
+ CellLabel->"Out[23]=",ExpressionUUID->"14de0c51-3096-4500-90bb-838ec2705b79"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Assuming", "[", 
+  RowBox[{
+   RowBox[{"s", ">", "0"}], " ", ",", 
+   RowBox[{"FourierTransform", "[", 
+    RowBox[{
+     RowBox[{"Sqrt", "[", 
+      RowBox[{"A", " ", "\[Pi]", " ", 
+       SuperscriptBox["s", "2"], 
+       RowBox[{"Exp", "[", 
+        RowBox[{
+         RowBox[{"-", 
+          SuperscriptBox["\[Pi]", "2"]}], " ", 
+         SuperscriptBox["s", "2"], 
+         RowBox[{"(", 
+          RowBox[{
+           RowBox[{"nx", "^", "2"}], "+", 
+           RowBox[{"ny", "^", "2"}]}], ")"}]}], "]"}]}], "]"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"nx", ",", "ny"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"x", ",", "y"}], "}"}], ",", 
+     RowBox[{"FourierParameters", "->", 
+      RowBox[{"{", 
+       RowBox[{"0", ",", 
+        RowBox[{"2", "*", "Pi"}]}], "}"}]}]}], "]"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.8451430322137847`*^9, 3.8451430978344164`*^9}},
+ CellLabel->"In[25]:=",ExpressionUUID->"d5c07f07-cc84-488a-95b7-5d57ca0965b1"],
+
+Cell[BoxData[
+ TemplateBox[{
+   FractionBox[
+    RowBox[{"2", " ", 
+      SqrtBox["A"], " ", 
+      SuperscriptBox["\[ExponentialE]", 
+       RowBox[{"-", 
+         FractionBox[
+          RowBox[{"2", " ", 
+            RowBox[{"(", 
+              RowBox[{
+                SuperscriptBox["x", "2"], "+", 
+                SuperscriptBox["y", "2"]}], ")"}]}], 
+          SuperscriptBox["s", "2"]]}]]}], 
+    RowBox[{
+      SqrtBox["\[Pi]"], " ", "s"}]], 
+   RowBox[{
+     RowBox[{"\[Pi]", " ", 
+       SqrtBox[
+        RowBox[{
+          SuperscriptBox["x", "2"], "+", 
+          SuperscriptBox["y", "2"]}]]}], "\[GreaterEqual]", "0"}]},
+  "ConditionalExpression"]], "Output",
+ CellChangeTimes->{{3.845143081603223*^9, 3.845143099295941*^9}},
+ CellLabel->"Out[25]=",ExpressionUUID->"cd6ebe96-d3ab-444e-b06d-35beabb1eb85"]
+}, Open  ]]
+},
+WindowSize->{557, 606},
+WindowMargins->{{Automatic, 212}, {2, Automatic}},
+FrontEndVersion->"12.3 for Microsoft Windows (64-bit) (July 9, 2021)",
+StyleDefinitions->"Default.nb",
+ExpressionUUID->"d7f1b494-32ce-4f12-b6e5-d79a7e19761b"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 1290, 37, 88, "Input",ExpressionUUID->"92441cdc-f725-49d0-bd0b-26e31d18c876"],
+Cell[1873, 61, 939, 25, 51, "Output",ExpressionUUID->"14de0c51-3096-4500-90bb-838ec2705b79"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[2849, 91, 984, 27, 76, "Input",ExpressionUUID->"d5c07f07-cc84-488a-95b7-5d57ca0965b1"],
+Cell[3836, 120, 818, 24, 108, "Output",ExpressionUUID->"cd6ebe96-d3ab-444e-b06d-35beabb1eb85"]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)
+
